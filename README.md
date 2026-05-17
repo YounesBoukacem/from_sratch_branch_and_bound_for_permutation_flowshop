@@ -121,18 +121,18 @@ Each instance contains:
 - **20 jobs**, **5 machines**
 - Known **upper bound** and **lower bound** for comparison
 
-| Instance | Jobs | Machines | Known UB | Known LB |
-|----------|------|----------|----------|----------|
-| 1        | 20   | 5        | 1278     | 1232     |
-| 2        | 20   | 5        | 1359     | 1290     |
-| 3        | 20   | 5        | 1081     | 1073     |
-| 4        | 20   | 5        | 1293     | 1268     |
-| 5        | 20   | 5        | 1236     | 1198     |
-| 6        | 20   | 5        | 1195     | 1180     |
-| 7        | 20   | 5        | 1239     | 1226     |
-| 8        | 20   | 5        | 1206     | 1170     |
-| 9        | 20   | 5        | 1230     | 1206     |
-| 10       | 20   | 5        | 1108     | 1082     |
+| Instance | Jobs | Machines | Taillard UB | Taillard LB |
+|----------|------|----------|-------------|-------------|
+| 1        | 20   | 5        | 1278        | 1232        |
+| 2        | 20   | 5        | 1359        | 1290        |
+| 3        | 20   | 5        | 1081        | 1073        |
+| 4        | 20   | 5        | 1293        | 1268        |
+| 5        | 20   | 5        | 1236        | 1198        |
+| 6        | 20   | 5        | 1195        | 1180        |
+| 7        | 20   | 5        | 1239        | 1226        |
+| 8        | 20   | 5        | 1206        | 1170        |
+| 9        | 20   | 5        | 1230        | 1206        |
+| 10       | 20   | 5        | 1108        | 1082        |
 
 ---
 
@@ -145,13 +145,34 @@ The notebook includes visualizations of:
 
 > ⚠️ Due to NP-hard complexity, the solver is run for gradually increasing numbers of jobs (1 to 12) before execution time becomes prohibitive for 20-job instances.
 
+### Algorithm Results on Full 20-Job Instances
+
+For this study, each instance was run to completion or interrupted manually when execution time became "excessive" (more than 5 minutes). When the algorithm **converges** (finishes without interruption), it proves optimality — the upper bound and lower bound collapse to the same value.
+
+For interrupted runs, the **Lower Bound** column shows Taillard's reference LB, which remains a valid lower bound on the optimal makespan.
+
+| Instance | Algorithm UB | Algorithm LB | Converged? |
+|----------|-------------|-------------|------------|
+| 1        | 1297        | 1232        | ❌          |
+| 2        | 1359        | 1359        | ✅          |
+| 3        | 1081        | 1081        | ✅          |
+| 4        | 1293        | 1293        | ✅          |
+| 5        | 1279        | 1198        | ❌          |
+| 6        | 1224        | 1180        | ❌          |
+| 7        | 1234        | 1234        | ✅          |
+| 8        | 1222        | 1170        | ❌          |
+| 9        | 1244        | 1206        | ❌          |
+| 10       | 1127        | 1082        | ❌          |
+
+> 💡 **Note:** Instance 7 converged to makespan **1234**, which is better than Taillard's reported upper bound of 1239 — confirming 1234 as the proven optimal for this instance.
+
 ---
 
 ## 📖 References
 
 - 📄 [Ignall & Schrage (1965) — Application of the Branch and Bound Technique to Some Flow-Shop Scheduling Problems](https://core.ac.uk/download/pdf/234676937.pdf)
 - 🎥 [YouTube — Branch and Bound for Flowshop explained](https://www.youtube.com/watch?v=Q58zRyoa4IE&t=2838s)
-
+- The optimality of the solutions found for the converged instances can be confirmed by checking this [Zenodo](https://zenodo.org/records/17028980) report
 ---
 
 <div align="center">
