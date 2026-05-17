@@ -170,7 +170,7 @@ For interrupted runs, the **Lower Bound** column shows Taillard's reference LB, 
 
 ## 📖 References
 
-- 📄 [Ignall & Schrage (1965) — Application of the Branch and Bound Technique to Some Flow-Shop Scheduling Problems](https://core.ac.uk/download/pdf/234676937.pdf)
+- 📄 [Ignall & Schrage (1965) — Application of the Branch and Bound Technique to Some Flow-Shop Scheduling Problems](https://fileserver-az.core.ac.uk/download/pdf/234676937.pdf)
 - 🎥 [YouTube — Branch and Bound for Flowshop explained](https://www.youtube.com/watch?v=Q58zRyoa4IE&t=2838s)
 - The optimality of the solutions found for the converged instances can be confirmed by checking this [Zenodo](https://zenodo.org/records/17028980) report
 ---
