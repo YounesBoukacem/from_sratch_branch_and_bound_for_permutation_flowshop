@@ -147,7 +147,7 @@ The notebook includes visualizations of:
 
 ### Algorithm Results on Full 20-Job Instances
 
-For this study, each instance was run to completion or interrupted manually when execution time became "excessive" (more than 5 minutes). When the algorithm **converges** (finishes without interruption), it proves optimality — the upper bound and lower bound collapse to the same value.
+For this study, each instance was run to completion or interrupted manually when execution time became "excessive" (more than ~1 hour). When the algorithm **converges** (finishes without interruption), it proves optimality — the upper bound and lower bound collapse to the same value.
 
 For interrupted runs, the **Lower Bound** column shows Taillard's reference LB, which remains a valid lower bound on the optimal makespan.
 
