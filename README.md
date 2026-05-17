@@ -164,7 +164,7 @@ For interrupted runs, the **Lower Bound** column shows Taillard's reference LB, 
 | 9        | 1244        | 1206        | ❌          |
 | 10       | 1127        | 1082        | ❌          |
 
-> 💡 **Note:** Instance 7 converged to makespan **1234**, which is better than Taillard's reported upper bound of 1239 — confirming 1234 as the proven optimal for this instance.
+> 💡 **Note:** Instance 7 converged to makespan **1234**, which is better than Taillard's reported upper bound of 1239 — confirming 1234 as a better optimal for this instance than the one found at Taillard's time.
 
 ---
 
